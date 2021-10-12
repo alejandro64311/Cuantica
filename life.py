@@ -199,9 +199,9 @@ def imprimir():
 #     imagen.close()
 
 
-llenarMatriz(numero_individuos_sanos,45)
-llenarMatriz(numero_sintomaticos,15)
-llenarMatriz(numero_asintomaticos,25)
+llenarMatriz(numero_individuos_sanos,SANO)
+llenarMatriz(numero_sintomaticos,CONTAGIADO_1)
+llenarMatriz(numero_asintomaticos,ASINTOMATICO_1)
 imprimir()
 
 

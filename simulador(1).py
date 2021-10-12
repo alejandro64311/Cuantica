@@ -9,8 +9,8 @@ def mapaColores():
 			colores.extend(['yellow','blak', 'green'])
 			cmap=mat.colors.ListedColormap(colores, name='colores', N=46)
 			ancho,alto=20,20
-			
-M=[[1,18,34],[1,18,34],[1,18,34]]
+
+M=[[1,18,34],[20,40,45],[42,43,44]]
 plt.imshow(M)
 plt.show()
 	
