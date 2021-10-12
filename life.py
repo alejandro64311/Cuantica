@@ -1,4 +1,5 @@
 import random
+import matplotlib
 import matplotlib.pyplot as plt
 
 # regilla inicial
@@ -190,13 +191,13 @@ def imprimir():
     for i in range(dimension_inicial_rejilla):
         print(M[i])
 
-# def graficar(num):
-#     imagen=open("cuadro_%03d.pbm"%num,"w")
-#     imagen.write("P1 "+str(dimension_inicial_rejilla)+" "+str(dimension_inicial_rejilla))
-#     for i in range(dimension_inicial_rejilla):
-#         for j in range(dimension_inicial_rejilla):
-#             imagen.write(" "+str(M[i][j]))
-#     imagen.close()
+def graficar(num):
+     imagen=open("cuadro_%03d.pbm"%num,"w")
+     imagen.write("P1 "+str(dimension_inicial_rejilla)+" "+str(dimension_inicial_rejilla))
+     for i in range(dimension_inicial_rejilla):
+         for j in range(dimension_inicial_rejilla):
+             imagen.write(" "+str(M[i][j]))
+     imagen.close()
 
 
 llenarMatriz(numero_individuos_sanos,SANO)
@@ -209,8 +210,8 @@ for ii in range(numero_de_evoluciones):
     print("\n",ii)
     aplicarReglas()
     imprimir()
+    plt.imshow(M)
+    plt.savefig("img%03d"%ii)
     
 
-plt.imshow(M)
-plt.show()
-
+#plt.show()
